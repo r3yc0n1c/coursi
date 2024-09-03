@@ -31,7 +31,7 @@ const courseSlice = createSlice({
         updateLikes: (state, action: PayloadAction<{ id: number; likes: number }>) => {
             const { id, likes } = action.payload;
             const course = state.courses.find(course => course.id === id);
-            console.log('course', course?.likes, id, likes)
+            // console.log('course', course?.likes, id, likes)
             if (course) {
                 course.likes = likes;
             }

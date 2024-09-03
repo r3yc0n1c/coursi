@@ -33,8 +33,10 @@ function CourseDetailsPage() {
 
     return (
         <div className="p-6 max-w-4xl mx-auto">
-            <ArrowLeftIcon className='mb-4 border-2 rounded-full p-1 hover:border-gray-300' width={32} height={32} />
-
+            <Link to="/">
+                <ArrowLeftIcon className='mb-4 border-2 rounded-full p-1 hover:border-gray-300' width={32} height={32} />
+            </Link>
+            
             <Card className="mb-4">
                 <CardContent>
                     <CardTitle className="lg:text-3xl text-xl font-bold mb-2 py-4">{course.name}</CardTitle>

@@ -22,7 +22,7 @@ export const fetchStudentById = createAsyncThunk(
             throw new Error(`Student with ID ${studentId} not found`);
         }
         const studentSnapshot = querySnapshot.docs[0];
-        console.log(studentSnapshot.data());
+        // console.log(studentSnapshot.data());
 
         return studentSnapshot.data() as Student;
     }
