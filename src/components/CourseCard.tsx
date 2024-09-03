@@ -1,11 +1,12 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import { HeartIcon } from "@radix-ui/react-icons";
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import useCourses from '@/redux/hooks/useCourses';
+import type { Course } from "@/models/courseModel";
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ course }: {
+    course: Course
+}) => {
     const { handleLikeClick } = useCourses();
 
     return (

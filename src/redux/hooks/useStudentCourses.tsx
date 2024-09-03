@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState, AppDispatch } from '@/redux/store';
-import { enrollCourse, fetchStudentById, markCourseAsCompleted, setStudent } from '@/redux/slices/students/student.slice';
+import { fetchStudentById, markCourseAsCompleted, setStudent } from '@/redux/slices/students/student.slice';
 
 const useStudentCourses = (studentId: number) => {
     const dispatch: AppDispatch = useDispatch();
@@ -12,7 +12,7 @@ const useStudentCourses = (studentId: number) => {
                 const student = await dispatch(fetchStudentById(studentId)).unwrap();
                 dispatch(setStudent(student));
             } catch (err) {
-                console.log(err.message || 'Failed to fetch student data');
+                console.log(err || 'Failed to fetch student data');
             }
         };
 

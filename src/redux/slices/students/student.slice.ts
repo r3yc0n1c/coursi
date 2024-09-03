@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
-import type { Course, CourseEnrolled, Student } from '@/models/courseModel';
+import type { CourseEnrolled, Student } from '@/models/courseModel';
 import { db } from '@/configs/firebase';
 
 const initialState: Student = {
@@ -32,7 +32,7 @@ const studentSlice = createSlice({
     name: 'student',
     initialState,
     reducers: {
-        setStudent: (state, action: PayloadAction<Student>) => {
+        setStudent: (_state, action: PayloadAction<Student>) => {
             return action.payload;
         },
         enrollCourse: (state, action: PayloadAction<CourseEnrolled>) => {

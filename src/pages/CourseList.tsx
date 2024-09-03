@@ -1,7 +1,7 @@
 import type React from 'react';
 import useCourses from '@/redux/hooks/useCourses';
 import { Input } from '@/components/ui/input';
-import { H1, H2 } from '@/components/ui/typography';
+import {  H2 } from '@/components/ui/typography';
 import CourseCard from '../components/CourseCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
